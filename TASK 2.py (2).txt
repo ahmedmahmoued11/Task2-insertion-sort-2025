@@ -1,0 +1,21 @@
+Insertion Sort
+ 
+students = ["محمد", "أحمد", "خالد", "سعيد", "باسم"]
+
+def insertion_sort_names(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > key:  # مقارنة أبجدية
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+students = ["محمد", "أحمد", "خالد", "سعيد", "باسم"]
+insertion_sort_names(students)
+print(students)
+
+
+output
+
+['أحمد', 'باسم', 'خالد', 'سعيد', 'محمد']
